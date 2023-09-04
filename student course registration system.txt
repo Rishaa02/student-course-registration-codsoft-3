@@ -1,0 +1,52 @@
+import java.util.*;
+class Course
+{
+    Scanner in = new Scanner(System.in);
+    int ccode,id,cap,sched;
+    String tit,desc,name,regcourse,dropcourse;
+    void coursedatabase()
+    {
+        System.out.println("Enter course code");
+        ccode = in.nextInt();
+        System.out.println("Enter course title");
+        tit = in.next();
+        System.out.println("Enter course capacity");
+        cap = in.nextInt();
+        System.out.println("Enter course description");
+        desc = in.next();
+        System.out.println("Enter course schedule");
+        sched = in.nextInt();
+    }
+    void studentdatabase()
+    {
+        System.out.println("Enter student name");
+        name = in.next();
+        System.out.println("Enter student id");
+        id = in.nextInt();
+        System.out.println("Enter courses registered by student");
+        regcourse = in.next();
+    }
+    void courselisting()
+    {
+        System.out.println("course code ="+ccode);
+        System.out.println("course title ="+tit);
+        System.out.println("course description ="+desc);
+        System.out.println("course capacity ="+cap);
+        System.out.println("course schedule ="+sched);
+    }
+    void courseremoval()
+    {
+     System.out.println("Enter the course to be dropped");
+     dropcourse = in.next();
+     System.out.println("course to be dropped ="+dropcourse);
+    }
+    public static void main(String args[])
+    {
+        Course ob = new Course();
+        ob.coursedatabase();
+        ob.studentdatabase();
+        ob.courselisting();
+        ob.courseremoval();
+    }
+    
+}
